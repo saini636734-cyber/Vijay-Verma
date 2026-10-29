@@ -1,0 +1,1485 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vijay Verma E-Mitra | Neemkathana</title>
+
+    <meta name="description" content="Vijay Verma E-Mitra, Neemkathana, Rajasthan. Explore digital services, online application assistance, bill payment information, and customer support.">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+        :root {
+            --navy: #101b35;
+            --blue: #2357d9;
+            --gold: #f5b942;
+            --light: #f5f7fc;
+            --text: #26334a;
+            --muted: #68758b;
+            --white: #ffffff;
+            --green: #159b59;
+            --border: #e2e7f0;
+            --shadow: 0 15px 40px rgba(16, 27, 53, 0.08);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
+        body {
+            font-family: 'Hind', sans-serif;
+            color: var(--text);
+            background: var(--white);
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button, input, textarea, select {
+            font: inherit;
+        }
+
+        button, a {
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .topbar {
+            min-height: 40px;
+            background: var(--navy);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 7px 7%;
+            gap: 15px;
+            font-size: 13px;
+        }
+
+        .topbar a {
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 18px 7%;
+            background: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 3px 18px rgba(0, 0, 0, 0.04);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            height: 48px;
+            width: 48px;
+            display: grid;
+            place-items: center;
+            background: var(--blue);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-size: 28px;
+            font-weight: 800;
+            border-radius: 12px;
+            border-bottom: 4px solid var(--gold);
+        }
+
+        .logo h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 18px;
+            line-height: 1.4;
+            color: var(--navy);
+        }
+
+        .logo span {
+            color: var(--muted);
+            font-size: 10px;
+            letter-spacing: 1.2px;
+        }
+
+        .header nav {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .header nav a {
+            font-size: 15px;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+
+        .header nav a:hover {
+            color: var(--blue);
+        }
+
+        .menu-btn {
+            display: none;
+            background: var(--navy);
+            color: white;
+            border: 0;
+            border-radius: 8px;
+            padding: 7px 12px;
+            font-size: 23px;
+            cursor: pointer;
+        }
+
+        .hero {
+            background:
+                radial-gradient(circle at 90% 20%, rgba(245, 185, 66, 0.12), transparent 30%),
+                linear-gradient(125deg, #101b35, #1d376b);
+            color: white;
+            min-height: 610px;
+            padding: 80px 7%;
+            display: grid;
+            grid-template-columns: 1.25fr 0.75fr;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .hero-content {
+            max-width: 680px;
+        }
+
+        .badge {
+            display: inline-block;
+            color: var(--gold);
+            background: rgba(255, 255, 255, 0.08);
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-size: 12px;
+            letter-spacing: 1px;
+            margin-bottom: 23px;
+        }
+
+        .hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(34px, 4.4vw, 58px);
+            line-height: 1.25;
+            margin-bottom: 23px;
+        }
+
+        .hero h1 span {
+            color: var(--gold);
+            display: block;
+        }
+
+        .hero-content > p {
+            font-size: 17px;
+            color: #d7dfef;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            border: 0;
+            padding: 13px 23px;
+            border-radius: 8px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
+        }
+
+        .btn-primary {
+            background: var(--gold);
+            color: var(--navy);
+        }
+
+        .btn-whatsapp {
+            background: var(--green);
+            color: white;
+        }
+
+        .btn-dark {
+            background: var(--navy);
+            color: white;
+        }
+
+        .hero-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 45px;
+        }
+
+        .hero-features div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero-features strong {
+            color: var(--gold);
+            font-size: 24px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .hero-features span {
+            color: #d7dfef;
+            font-size: 13px;
+        }
+
+        .hero-card {
+            background: white;
+            color: var(--navy);
+            border-radius: 22px;
+            padding: 32px;
+            box-shadow: 0 25px 70px rgba(0, 0, 0, 0.22);
+            border-top: 5px solid var(--gold);
+        }
+
+        .card-symbol {
+            background: #eef3ff;
+            color: var(--blue);
+            display: inline-block;
+            border-radius: 10px;
+            padding: 8px 17px;
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 17px;
+        }
+
+        .hero-card h2 {
+            font-size: 26px;
+            margin-bottom: 3px;
+        }
+
+        .hero-card > p {
+            color: var(--muted);
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
+
+        .hero-card hr {
+            border: 0;
+            border-top: 1px solid var(--border);
+            margin: 22px 0;
+        }
+
+        .info-row {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            padding: 10px 0;
+        }
+
+        .info-row span {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .info-row strong {
+            font-size: 16px;
+        }
+
+        .call-button {
+            display: block;
+            margin-top: 20px;
+            text-align: center;
+            background: var(--blue);
+            color: white;
+            padding: 12px;
+            border-radius: 8px;
+            font-weight: 700;
+        }
+
+        .notice {
+            display: flex;
+            align-items: flex-start;
+            gap: 18px;
+            margin: 35px 7% 10px;
+            padding: 22px;
+            background: #fff8e8;
+            border: 1px solid #f4dfab;
+            border-radius: 12px;
+        }
+
+        .notice-icon {
+            font-size: 27px;
+        }
+
+        .notice h3 {
+            font-size: 18px;
+            color: var(--navy);
+            margin-bottom: 4px;
+        }
+
+        .notice p {
+            color: #6d5b31;
+            font-size: 14px;
+        }
+
+        .section {
+            padding: 85px 7%;
+        }
+
+        .section-heading {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 45px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            color: var(--blue);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .section-heading h2,
+        .about-content h2 {
+            font-size: clamp(28px, 3vw, 40px);
+            line-height: 1.35;
+            color: var(--navy);
+            margin-bottom: 12px;
+        }
+
+        .section-heading h2 span,
+        .about-content h2 span {
+            color: var(--blue);
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            font-size: 16px;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .service-card {
+            background: white;
+            border: 1px solid var(--border);
+            padding: 27px;
+            border-radius: 14px;
+            transition: 0.25s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            border-color: #b9c9fa;
+            box-shadow: var(--shadow);
+        }
+
+        .service-icon {
+            display: grid;
+            place-items: center;
+            height: 58px;
+            width: 58px;
+            background: #eef3ff;
+            border-radius: 13px;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 21px;
+            margin-bottom: 9px;
+            color: var(--navy);
+        }
+
+        .service-card p {
+            color: var(--muted);
+            font-size: 15px;
+            min-height: 70px;
+        }
+
+        .service-link {
+            display: inline-block;
+            color: var(--blue);
+            font-weight: 700;
+            margin-top: 17px;
+        }
+
+        .documents-section {
+            background: var(--light);
+            padding: 75px 7%;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .documents-content h2 {
+            font-size: 34px;
+            color: var(--navy);
+            margin-bottom: 15px;
+        }
+
+        .documents-content > p {
+            color: var(--muted);
+            margin-bottom: 20px;
+        }
+
+        .document-list {
+            display: grid;
+            gap: 13px;
+            margin: 25px 0;
+        }
+
+        .document-list div {
+            background: white;
+            padding: 12px 16px;
+            border-radius: 8px;
+            border-left: 3px solid var(--blue);
+        }
+
+        .documents-content .small-note {
+            font-size: 13px;
+        }
+
+        .document-box {
+            background: white;
+            border-radius: 20px;
+            padding: 38px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .document-emoji {
+            font-size: 55px;
+            margin-bottom: 15px;
+        }
+
+        .document-box h3 {
+            color: var(--navy);
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        .document-box p {
+            color: var(--muted);
+            margin-bottom: 25px;
+        }
+
+        .about-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 65px;
+        }
+
+        .about-visual {
+            min-height: 430px;
+            border-radius: 20px;
+            padding: 35px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background:
+                radial-gradient(circle at 80% 20%, rgba(245, 185, 66, 0.35), transparent 35%),
+                linear-gradient(135deg, #17284d, #2357d9);
+            box-shadow: var(--shadow);
+            color: white;
+        }
+
+        .about-icon {
+            display: grid;
+            place-items: center;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 18px;
+            width: 135px;
+            height: 135px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 800;
+            font-size: 23px;
+            color: var(--gold);
+            letter-spacing: 1px;
+        }
+
+        .about-caption span {
+            color: var(--gold);
+            font-size: 11px;
+            letter-spacing: 1.5px;
+        }
+
+        .about-caption h3 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 29px;
+            margin: 8px 0;
+        }
+
+        .about-caption p {
+            color: #d7dfef;
+        }
+
+        .about-content > p {
+            color: var(--muted);
+            margin: 18px 0;
+        }
+
+        .about-points {
+            display: grid;
+            gap: 12px;
+            margin: 25px 0;
+            font-weight: 600;
+        }
+
+        .about-points div {
+            color: var(--navy);
+        }
+
+        .contact-section {
+            background: var(--light);
+            padding: 85px 7%;
+        }
+
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 0.85fr 1.15fr;
+            gap: 35px;
+            max-width: 1100px;
+            margin: 0 auto;
+            align-items: start;
+        }
+
+        .contact-info {
+            background: var(--navy);
+            color: white;
+            border-radius: 16px;
+            padding: 32px;
+        }
+
+        .contact-info h3 {
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+        .contact-info > p {
+            color: #d1daeb;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 13px;
+            padding: 17px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+        }
+
+        .contact-icon {
+            font-size: 22px;
+        }
+
+        .contact-item div:last-child {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-item span {
+            color: #bdc9df;
+            font-size: 13px;
+        }
+
+        .contact-item strong {
+            font-size: 16px;
+            overflow-wrap: anywhere;
+        }
+
+        .full-btn {
+            width: 100%;
+            margin-top: 18px;
+        }
+
+        .contact-form {
+            background: white;
+            padding: 35px;
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+        }
+
+        .contact-form h3 {
+            font-size: 26px;
+            color: var(--navy);
+            margin-bottom: 22px;
+        }
+
+        .contact-form label {
+            display: block;
+            font-weight: 700;
+            margin: 16px 0 7px;
+            font-size: 15px;
+        }
+
+        .contact-form input,
+        .contact-form select,
+        .contact-form textarea {
+            width: 100%;
+            padding: 13px 14px;
+            border: 1px solid #dbe1ec;
+            border-radius: 8px;
+            background: #fcfdff;
+            outline: none;
+            color: var(--text);
+        }
+
+        .contact-form input:focus,
+        .contact-form select:focus,
+        .contact-form textarea:focus {
+            border-color: var(--blue);
+            box-shadow: 0 0 0 3px rgba(35, 87, 217, 0.1);
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+            min-height: 110px;
+        }
+
+        .form-note {
+            font-size: 12px;
+            color: var(--muted);
+            margin-top: 12px;
+        }
+
+        .footer {
+            background: #0b1328;
+            color: white;
+            padding: 40px 7% 20px;
+        }
+
+        .footer-main {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            padding-bottom: 30px;
+        }
+
+        .footer-main h2 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 22px;
+        }
+
+        .footer-main h2 span {
+            color: var(--gold);
+        }
+
+        .footer-main p {
+            color: #b7c1d5;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 22px;
+        }
+
+        .footer-links a {
+            color: #d7dfef;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            padding-top: 20px;
+            color: #aeb9cf;
+            font-size: 12px;
+        }
+
+        .floating-whatsapp {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            z-index: 99;
+            height: 58px;
+            width: 58px;
+            display: grid;
+            place-items: center;
+            background: #159b59;
+            color: white;
+            border-radius: 50%;
+            font-size: 30px;
+            box-shadow: 0 8px 25px rgba(21, 155, 89, 0.35);
+            transition: transform 0.2s;
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.08);
+        }
+
+        @media (max-width: 1000px) {
+            .hero {
+                gap: 35px;
+                padding-top: 60px;
+                padding-bottom: 60px;
+            }
+
+            .service-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-section,
+            .documents-section {
+                gap: 35px;
+            }
+
+            .header nav {
+                gap: 15px;
+            }
+        }
+
+        @media (max-width: 760px) {
+            .topbar {
+                padding: 8px 5%;
+                font-size: 11px;
+            }
+
+            .header {
+                padding: 13px 5%;
+            }
+
+            .logo-icon {
+                height: 42px;
+                width: 42px;
+                font-size: 23px;
+            }
+
+            .logo h2 {
+                font-size: 15px;
+            }
+
+            .logo span {
+                font-size: 8px;
+                letter-spacing: 0.5px;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .header nav {
+                display: none;
+                position: absolute;
+                left: 0;
+                top: 100%;
+                width: 100%;
+                background: white;
+                padding: 15px 5% 22px;
+                box-shadow: 0 12px 20px rgba(0, 0, 0, 0.08);
+                flex-direction: column;
+                align-items: stretch;
+                gap: 0;
+            }
+
+            .header nav.open {
+                display: flex;
+            }
+
+            .header nav a {
+                padding: 12px 0;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 55px 5%;
+                gap: 35px;
+            }
+
+            .hero h1 {
+                font-size: 37px;
+            }
+
+            .hero-content > p {
+                font-size: 15px;
+            }
+
+            .hero-features {
+                gap: 18px;
+            }
+
+            .hero-card {
+                padding: 25px;
+            }
+
+            .notice {
+                margin: 25px 5% 5px;
+                padding: 17px;
+            }
+
+            .section,
+            .contact-section {
+                padding: 60px 5%;
+            }
+
+            .section-heading {
+                margin-bottom: 30px;
+            }
+
+            .service-grid {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .service-card {
+                padding: 23px;
+            }
+
+            .service-card p {
+                min-height: auto;
+            }
+
+            .documents-section {
+                padding: 55px 5%;
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .documents-content h2 {
+                font-size: 29px;
+            }
+
+            .document-box {
+                padding: 27px;
+            }
+
+            .about-section {
+                grid-template-columns: 1fr;
+                gap: 35px;
+            }
+
+            .about-visual {
+                min-height: 340px;
+                padding: 25px;
+            }
+
+            .about-caption h3 {
+                font-size: 23px;
+            }
+
+            .contact-layout {
+                grid-template-columns: 1fr;
+                gap: 22px;
+            }
+
+            .contact-info,
+            .contact-form {
+                padding: 24px;
+            }
+
+            .footer-main {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .footer-links {
+                gap: 15px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .floating-whatsapp {
+                right: 15px;
+                bottom: 15px;
+                height: 52px;
+                width: 52px;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            *,
+            *::before,
+            *::after {
+                transition-duration: 0.01ms !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="topbar">
+        <p>Rajasthan E-Mitra Services | Neemkathana</p>
+        <a href="tel:9460747085">Call: 9460747085</a>
+    </div>
+
+    <header class="header">
+        <a href="#home" class="logo">
+            <div class="logo-icon">E</div>
+            <div>
+                <h2>VIJAY VERMA</h2>
+                <span>E-MITRA & DIGITAL SERVICES</span>
+            </div>
+        </a>
+
+        <button class="menu-btn" id="menuBtn"
+                aria-label="Open navigation menu"
+                aria-expanded="false">☰</button>
+
+        <nav id="navigation">
+            <a href="#home">Home</a>
+            <a href="#services">Our Services</a>
+            <a href="#about">About Us</a>
+            <a href="#documents">Documents</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="badge">YOUR LOCAL DIGITAL SERVICE CENTER</span>
+
+            <h1>
+                Welcome to
+                <span>Vijay Verma E-Mitra</span>
+            </h1>
+
+            <p>
+                Your convenient local destination for digital services,
+                online application assistance, government scheme information,
+                bill payment assistance, and other available online services.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#services" class="btn btn-primary">
+                    Explore Our Services →
+                </a>
+
+                <a href="https://wa.me/919460747085"
+                   target="_blank" rel="noopener"
+                   class="btn btn-whatsapp">
+                    WhatsApp Us
+                </a>
+            </div>
+
+            <div class="hero-features">
+                <div>
+                    <strong>01</strong>
+                    <span>Digital Services</span>
+                </div>
+
+                <div>
+                    <strong>02</strong>
+                    <span>Application Assistance</span>
+                </div>
+
+                <div>
+                    <strong>03</strong>
+                    <span>Customer Support</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-card">
+            <div class="card-symbol">E-MITRA</div>
+            <h2>Your Local Service Center</h2>
+            <p>VIJAY VERMA E-MITRA</p>
+            <hr>
+
+            <div class="info-row">
+                <span>Shop Owner</span>
+                <strong>Vijay Verma</strong>
+            </div>
+
+            <div class="info-row">
+                <span>Location</span>
+                <strong>Neemkathana</strong>
+            </div>
+
+            <div class="info-row">
+                <span>Contact Number</span>
+                <strong>9460747085</strong>
+            </div>
+
+            <a href="tel:9460747085" class="call-button">
+                Call Now
+            </a>
+        </div>
+    </section>
+
+    <section class="notice">
+        <div class="notice-icon">ℹ️</div>
+        <div>
+            <h3>Important Customer Information</h3>
+            <p>
+                Service availability, eligibility, documents, and fees may
+                vary. Please confirm the details with the shop before applying
+                for any service. This website is for information and enquiries.
+            </p>
+        </div>
+    </section>
+
+    <section class="section" id="services">
+        <div class="section-heading">
+            <span class="eyebrow">WHAT WE OFFER</span>
+            <h2>Our <span>Popular Services</span></h2>
+            <p>
+                Select a service to enquire about its availability and
+                requirements.
+            </p>
+        </div>
+
+        <div class="service-grid">
+
+            <article class="service-card">
+                <div class="service-icon">📝</div>
+                <h3>Online Applications</h3>
+                <p>Assistance with available government and other online application forms.</p>
+                <a href="#contact" class="service-link" data-service="Online Applications">Enquire Now →</a>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon">🏛️</div>
+                <h3>Government Schemes</h3>
+                <p>Information about available government schemes and application procedures.</p>
+                <a href="#contact" class="service-link" data-service="Government Schemes">Enquire Now →</a>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon">📄</div>
+                <h3>Certificate Assistance</h3>
+                <p>Information and assistance for available certificate application services.</p>
+                <a href="#contact" class="service-link" data-service="Certificate Assistance">Enquire Now →</a>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon">💡</div>
+                <h3>Electricity Bill Assistance</h3>
+                <p>Electricity bill payment assistance, subject to service availability.</p>
+                <a href="#contact" class="service-link" data-service="Electricity Bill Assistance">Enquire Now →</a>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon">💧</div>
+                <h3>Water Bill Assistance</h3>
+                <p>Information about available water bill payment services.</p>
+                <a href="#contact" class="service-link" data-service="Water Bill Assistance">Enquire Now →</a>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon">🎓</div>
+                <h3>Scholarship Applications</h3>
+                <p>Application assistance based on eligibility and portal availability.</p>
+                <a href="#contact" class="service-link" data-service="Scholarship Applications">Enquire Now →</a>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon">💼</div>
+                <h3>Recruitment Forms</h3>
+                <p>Assistance with available recruitment and employment application forms.</p>
+                <a href="#contact" class="service-link" data-service="Recruitment Forms">Enquire Now →</a>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon">🪪</div>
+                <h3>Identity Documents</h3>
+                <p>Information about available identity document-related services.</p>
+                <a href="#contact" class="service-link" data-service="Identity Documents">Enquire Now →</a>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon">🏦</div>
+                <h3>Banking Assistance</h3>
+                <p>Information about authorized banking services, where available.</p>
+                <a href="#contact" class="service-link" data-service="Banking Assistance">Enquire Now →</a>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon">🖨️</div>
+                <h3>Print and Scan</h3>
+                <p>Document printing and scanning, subject to shop facilities.</p>
+                <a href="#contact" class="service-link" data-service="Print and Scan">Enquire Now →</a>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon">📋</div>
+                <h3>Pension Information</h3>
+                <p>Information about available pension schemes, eligibility, and applications.</p>
+                <a href="#contact" class="service-link" data-service="Pension Information">Enquire Now →</a>
+            </article>
+
+            <article class="service-card">
+                <div class="service-icon">🌐</div>
+                <h3>Other Digital Services</h3>
+                <p>Enquire about other online and digital services available at the shop.</p>
+                <a href="#contact" class="service-link" data-service="Other Digital Services">Enquire Now →</a>
+            </article>
+
+        </div>
+    </section>
+
+    <section class="documents-section" id="documents">
+        <div class="documents-content">
+            <span class="eyebrow">BEFORE YOU VISIT</span>
+            <h2>Documents and Preparation</h2>
+
+            <p>
+                The required documents depend on the service you need.
+                Please enquire about the exact requirements before visiting.
+            </p>
+
+            <div class="document-list">
+                <div>✓ Identity documents, where required</div>
+                <div>✓ Mobile number, where required</div>
+                <div>✓ Supporting application documents</div>
+                <div>✓ Relevant bill or application information</div>
+                <div>✓ Other documents required for your service</div>
+            </div>
+
+            <p class="small-note">
+                This is a general checklist, not an official list of mandatory
+                documents for every service. Please confirm exact requirements.
+            </p>
+        </div>
+
+        <div class="document-box">
+            <div class="document-emoji">📁</div>
+            <h3>Prepare Before You Visit</h3>
+            <p>
+                Tell us which service you need and ask about documents,
+                availability, and applicable charges.
+            </p>
+            <a href="#contact" class="btn btn-primary">Ask a Question</a>
+        </div>
+    </section>
+
+    <section class="section about-section" id="about">
+        <div class="about-visual">
+            <div class="about-icon">E-MITRA</div>
+            <div class="about-caption">
+                <span>YOUR LOCAL DIGITAL SERVICE CENTER</span>
+                <h3>Vijay Verma E-Mitra</h3>
+                <p>Neemkathana, Rajasthan</p>
+            </div>
+        </div>
+
+        <div class="about-content">
+            <span class="eyebrow">ABOUT OUR SHOP</span>
+            <h2>Local Support for <span>Digital Services</span></h2>
+
+            <p>
+                Vijay Verma E-Mitra is a local digital service centre in
+                Neemkathana, Rajasthan. Customers can enquire about available
+                online services, application procedures, document requirements,
+                and other digital assistance.
+            </p>
+
+            <p>
+                Please confirm service availability, applicable fees, and
+                required documents before visiting the shop.
+            </p>
+
+            <div class="about-points">
+                <div>✓ Information about available services</div>
+                <div>✓ Assistance with application procedures</div>
+                <div>✓ Direct customer contact</div>
+            </div>
+
+            <a href="#contact" class="btn btn-dark">Contact Us →</a>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="section-heading">
+            <span class="eyebrow">GET IN TOUCH</span>
+            <h2>Contact <span>Our Shop</span></h2>
+            <p>
+                Fill in the form below to prepare an enquiry message on WhatsApp.
+            </p>
+        </div>
+
+        <div class="contact-layout">
+
+            <div class="contact-info">
+                <h3>Vijay Verma E-Mitra</h3>
+                <p>Contact us for service information and enquiries.</p>
+
+                <div class="contact-item">
+                    <div class="contact-icon">👤</div>
+                    <div>
+                        <span>Shop Owner</span>
+                        <strong>Vijay Verma</strong>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <span>Shop Address</span>
+                        <strong>Neemkathana, Khatre Road, Rajasthan</strong>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div>
+                        <span>Mobile Number</span>
+                        <strong>9460747085</strong>
+                    </div>
+                </div>
+
+                <a href="tel:9460747085" class="btn btn-primary full-btn">
+                    📞 Call Now
+                </a>
+
+                <a href="https://wa.me/919460747085"
+                   target="_blank" rel="noopener"
+                   class="btn btn-whatsapp full-btn">
+                    Message on WhatsApp
+                </a>
+            </div>
+
+            <form class="contact-form" id="contactForm">
+                <h3>Send an Enquiry</h3>
+
+                <label for="customerName">Your Name *</label>
+                <input
+                    type="text"
+                    id="customerName"
+                    placeholder="Enter your full name"
+                    maxlength="100"
+                    required
+                >
+
+                <label for="customerPhone">Your Mobile Number *</label>
+                <input
+                    type="tel"
+                    id="customerPhone"
+                    placeholder="Enter your 10-digit mobile number"
+                    inputmode="numeric"
+                    pattern="[6-9][0-9]{9}"
+                    maxlength="10"
+                    required
+                >
+
+                <label for="serviceSelect">Select a Service *</label>
+                <select id="serviceSelect" required>
+                    <option value="">Choose a service</option>
+                    <option>Online Applications</option>
+                    <option>Government Schemes</option>
+                    <option>Certificate Assistance</option>
+                    <option>Electricity Bill Assistance</option>
+                    <option>Water Bill Assistance</option>
+                    <option>Scholarship Applications</option>
+                    <option>Recruitment Forms</option>
+                    <option>Identity Documents</option>
+                    <option>Banking Assistance</option>
+                    <option>Print and Scan</option>
+                    <option>Pension Information</option>
+                    <option>Other Digital Services</option>
+                </select>
+
+                <label for="customerMessage">Describe Your Requirement *</label>
+                <textarea
+                    id="customerMessage"
+                    rows="4"
+                    maxlength="2000"
+                    placeholder="Describe the service or assistance you need"
+                    required
+                ></textarea>
+
+                <button type="submit" class="btn btn-primary full-btn">
+                    Send Enquiry on WhatsApp →
+                </button>
+
+                <p class="form-note">
+                    WhatsApp will open with your message prepared. Review the
+                    message and press Send yourself. This form does not submit
+                    a government application or store your information.
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-main">
+            <div>
+                <h2>VIJAY VERMA <span>E-MITRA</span></h2>
+                <p>Neemkathana, Khatre Road, Rajasthan</p>
+                <p>Contact: 9460747085</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                © <span id="year"></span> Vijay Verma E-Mitra.
+                All rights reserved.
+            </p>
+            <p>Website for service information and customer enquiries.</p>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/919460747085"
+       class="floating-whatsapp"
+       target="_blank"
+       rel="noopener"
+       aria-label="Contact on WhatsApp">☏</a>
+
+    <script>
+        // WhatsApp business number: India country code + mobile number
+        const businessWhatsApp = "919460747085";
+
+        // Mobile navigation menu
+        const menuBtn = document.getElementById("menuBtn");
+        const navigation = document.getElementById("navigation");
+
+        menuBtn.addEventListener("click", function () {
+            const isOpen = navigation.classList.toggle("open");
+
+            menuBtn.textContent = isOpen ? "✕" : "☰";
+            menuBtn.setAttribute("aria-expanded", String(isOpen));
+        });
+
+        // Close the menu after clicking a navigation link
+        document.querySelectorAll("#navigation a").forEach(function (link) {
+            link.addEventListener("click", function () {
+                navigation.classList.remove("open");
+                menuBtn.textContent = "☰";
+                menuBtn.setAttribute("aria-expanded", "false");
+            });
+        });
+
+        // Automatically update the copyright year
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+        // Customer enquiry form
+        const contactForm = document.getElementById("contactForm");
+
+        contactForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const name = document
+                .getElementById("customerName")
+                .value.trim();
+
+            const phone = document
+                .getElementById("customerPhone")
+                .value.trim();
+
+            const service = document
+                .getElementById("serviceSelect")
+                .value;
+
+            const message = document
+                .getElementById("customerMessage")
+                .value.trim();
+
+            if (!name || !phone || !service || !message) {
+                alert("Please fill in all required fields.");
+                return;
+            }
+
+            // Validate a standard 10-digit Indian mobile number
+            const mobilePattern = /^[6-9][0-9]{9}$/;
+
+            if (!mobilePattern.test(phone)) {
+                alert("Please enter a valid 10-digit Indian mobile number.");
+                return;
+            }
+
+            const whatsappMessage =
+                "Hello Vijay Verma E-Mitra!\n\n" +
+                "I would like to enquire about your services.\n\n" +
+                "Customer Name: " + name + "\n" +
+                "Customer Mobile: " + phone + "\n" +
+                "Required Service: " + service + "\n" +
+                "Requirement Details: " + message + "\n\n" +
+                "Please provide information about availability, " +
+                "required documents, and applicable charges.";
+
+            const whatsappURL =
+                "https://wa.me/" +
+                businessWhatsApp +
+                "?text=" +
+                encodeURIComponent(whatsappMessage);
+
+            // Open WhatsApp with a prepared message.
+            // The customer must press Send manually.
+            const newWindow = window.open(
+                whatsappURL,
+                "_blank",
+                "noopener,noreferrer"
+            );
+
+            // Fallback if the browser blocks a new window
+            if (!newWindow) {
+                window.location.href = whatsappURL;
+            }
+        });
+
+        // Selecting a service card automatically selects it in the form
+        document.querySelectorAll(".service-link").forEach(function (link) {
+            link.addEventListener("click", function () {
+                const selectedService = link.dataset.service;
+                const serviceSelect =
+                    document.getElementById("serviceSelect");
+
+                for (let i = 0; i < serviceSelect.options.length; i++) {
+                    if (serviceSelect.options[i].text === selectedService) {
+                        serviceSelect.selectedIndex = i;
+                        break;
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
+```
